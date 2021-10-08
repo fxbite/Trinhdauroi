@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+
+<style>
+        * {
+          box-sizing: border-box;
+        }
+        input[type=text], select, textarea {
+          width: 30%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+          text-align: center;
+          }
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border-radius: 4px;
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        label{
+        color: firebrick;
+        background-color: rgb(161, 249, 252);
+        text-align: center;
+}
+    form{
+        text-align: center;
+    }
+    table, tr{
+    border-collapse:collapse;
+    border-style: double;
+    border: 2px solid rgb(255, 97, 242);
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+    }
+    td{
+    border: 2px solid rgb(255, 97, 242);
+}
+table tr:nth-child(odd){
+    background-color:rgba(131, 255, 126, 0.719);
+}
+table tr:nth-child(even){
+    background-color:rgba(248, 255, 157, 0.925);
+}
+tr:hover {background-color: rgba(177, 255, 249, 0.897);}
+
+tr:nth-child(1){
+    background-color:skyblue;
+}
+</style>    
+    
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+</head>
+  <body>
+    <style>
+        body {
+        background-image: url('https://img.devilchan.com/original/2020/08/05/12/05/1693/uruha-rushia-1693-1920x1080.jpeg');
+        }
+        h1, p{
+            color:red;
+            font-style: normal;            
+        }
+        
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('home_page') }}">
+            <img src="https://i1.sndcdn.com/artworks-v8WSGW4z4QQ1zbMy-k7gSGg-t500x500.jpg" alt="" width="25" height="25" class="d-inline-block align-text-top">
+                JDsatashi
+        </a>  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('home_page') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('manage_page') }}">Manage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('new') }}">Create</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
